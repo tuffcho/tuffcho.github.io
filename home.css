@@ -1,0 +1,30 @@
+/* Home page: same look as the app pages (yellow hero, cards, blue privacy band). */
+.home main{padding:0}
+.home section{padding:36px 0}
+.home .wrap{max-width:1000px}
+.home h2{font-size:24px;margin:0 0 14px}
+.home .hero{background:linear-gradient(135deg,#ffcc00 0%,#ffe066 45%,#d7e8f8 100%);color:#1d2330;padding:40px 0 36px}
+.home .hero h1{font-size:36px;margin:0}
+.home .hero .lead{color:#3a4252;margin:8px 0 0;font-size:19px}
+.home .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+.home .chips span{background:rgba(255,255,255,.8);border-radius:99px;padding:8px 16px;font-size:16px;font-weight:600}
+.home .apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.home .app{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.08);display:flex;flex-direction:column}
+.home .app .banner{display:block;background:#ffcc00;height:150px}
+.home .app .banner img{width:100%;height:100%;object-fit:contain;display:block}
+.home .app .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.home .app .head{display:flex;gap:14px;align-items:center}
+.home .app .head div{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.home .app .head img{width:56px;height:56px;border-radius:14px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+.home .app h3{margin:0;font-size:21px}
+.home .app h3 a{color:var(--text);text-decoration:none}
+.home .app p{margin:0;color:var(--muted)}
+.home .app ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.home .app li{border:1px solid var(--line);border-left:4px solid var(--c);border-radius:8px;padding:4px 10px;font-size:14px;font-weight:600}
+.home .app .actions{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.home .app .actions .btn{margin:0}
+.home .soon{display:inline-block;background:#1d2330;color:#fff;padding:3px 10px;border-radius:99px;font-weight:700;font-size:12px}
+@media (prefers-color-scheme:dark){.home .soon{background:#e8ebf2;color:#1d2330}}
+.home .privacy{background:linear-gradient(135deg,#24527f,#5a9bdb);color:#fff}
+.home .privacy p{color:#e8f1fb;max-width:720px;margin:0}
+@media (max-width:600px){.home .hero h1{font-size:28px}.home .hero{padding:28px 0}}
