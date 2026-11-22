@@ -1,0 +1,59 @@
+/* Visual metronome page: yellow of the app icon, soft blue of the app, red / green beat lights. */
+.vm main{padding:0}
+.vm section{padding:36px 0}
+.vm h2{font-size:24px;margin:0 0 14px}
+.vm .note{color:var(--muted);font-size:14px;margin:8px 0 0}
+.vm .band{background:linear-gradient(180deg,#e9f2fb,#f7f8fa)}
+@media (prefers-color-scheme:dark){.vm .band{background:linear-gradient(180deg,#16212e,#12151c)}}
+.vm .wrap{max-width:1000px}
+.vm .hero{background:linear-gradient(135deg,#ffcc00 0%,#ffe066 45%,#d7e8f8 100%);color:#1d2330;padding:24px 0 36px}
+.vm .hero a{color:#1d2330}
+.vm .hero .back{margin:0 0 14px;font-size:14px}
+.vm .hero .banner{max-width:820px;margin:0 auto;aspect-ratio:1024/270;background:#ffcc00;border-radius:18px;box-shadow:0 12px 40px rgba(0,0,0,.18);overflow:hidden;display:flex;justify-content:center}
+.vm .hero .banner img{height:100%;width:auto;max-width:100%;object-fit:contain;display:block}
+.vm .hero-row{display:flex;gap:18px;align-items:center;margin:26px 0 8px}
+.vm .hero .appicon{width:84px;height:84px;border-radius:20px;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+.vm .hero h1{font-size:34px;margin:0}
+.vm .hero .lead{color:#3a4252;margin:6px 0 0;font-size:18px}
+.vm .chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.vm .chips span{background:rgba(255,255,255,.8);border-radius:99px;padding:8px 16px;font-size:16px;font-weight:600}
+.vm .cta .soon{display:inline-block;background:#1d2330;color:#fff;padding:9px 16px;border-radius:9px;font-weight:700;margin-right:8px}
+.vm .hero .btn.ghost{color:#1d2330;border-color:#1d2330}
+.vm .feats{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.vm .feats .f{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:14px;padding:16px 18px}
+.vm .feats .e{font-size:30px;line-height:1}
+.vm .feats h3{margin:8px 0 4px;font-size:17px;color:var(--c)}
+.vm .feats p{margin:0;color:var(--muted);font-size:15px}
+
+/* Live demo: the floating bar over a page of sheet music */
+.vm .demo{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.15);background:#f7f3ea;min-height:300px;padding:30px 18px}
+.vm .staff{height:46px;margin:0 0 30px;background:repeating-linear-gradient(180deg,#9aa3ad 0 1.5px,transparent 1.5px 11px);opacity:.85}
+.vm .bar{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(1.3);display:flex;align-items:center;gap:6px;padding:6px;user-select:none}
+.vm .arrow{width:42px;height:42px;border:0;background:#5a9bdb;color:#fff;font:700 24px/1 system-ui,sans-serif;cursor:pointer;border-radius:8px}
+.vm .arrow.l{clip-path:polygon(32% 0,100% 0,100% 100%,32% 100%,0 50%)}
+.vm .arrow.r{clip-path:polygon(0 0,68% 0,100% 50%,68% 100%,0 100%)}
+.vm .info{color:#fff;text-shadow:0 1px 4px #000;text-align:center;min-width:52px}
+.vm .info b{display:block;font-size:19px}
+.vm .info small{font-size:13px;font-weight:600}
+.vm .dots{display:flex;align-items:center;padding:8px;cursor:pointer}
+.vm .dot{width:17px;height:17px;border-radius:50%;background:rgba(128,128,128,.6);border:1px solid rgba(0,0,0,.6);margin-left:5px}
+.vm .dot.gs{margin-left:16px}
+.vm .dot:first-child{margin-left:0}
+.vm .dot.strong{border:2px solid #e53935}
+.vm .dot.on{background:#43a047}
+.vm .dot.on.strong{background:#e53935}
+.vm .controls{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;align-items:center}
+.vm .controls button{border:1px solid var(--accent);background:var(--card);color:var(--accent);border-radius:99px;padding:7px 14px;font:600 15px system-ui,sans-serif;cursor:pointer}
+.vm .controls button.sel{background:#5a9bdb;border-color:#5a9bdb;color:#fff}
+.vm .controls .go{background:#1d2330;border-color:#1d2330;color:#fff;border-radius:9px}
+
+.vm .meters{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.vm .meters th,.vm .meters td{padding:10px 14px;border-bottom:1px solid var(--line);text-align:left}
+.vm .meters th{background:#ffcc00;color:#1d2330}
+.vm .meters td:first-child{font-weight:700;width:22%;white-space:nowrap}
+.vm .meters code{background:var(--bg);border:1px solid var(--line);border-radius:7px;padding:2px 8px;margin:2px 6px 2px 0;display:inline-block;font:600 15px system-ui,sans-serif}
+
+.vm .privacy{background:linear-gradient(135deg,#24527f,#5a9bdb);color:#fff}
+.vm .privacy p{color:#e8f1fb;max-width:720px}
+.vm .btn.ghost.light{color:#fff;border-color:#fff}
+@media (max-width:600px){.vm .hero h1{font-size:26px}.vm .hero .appicon{width:64px;height:64px}.vm .bar{transform:translate(-50%,-50%) scale(.9)}}
